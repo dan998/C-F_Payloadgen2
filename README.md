@@ -15,9 +15,9 @@ pkg install curl
 
 pkg install git
 
-git clone https://github.com/dan998/C-F_Payloadgen
+git clone https://github.com/dan998/C-F_Payloadgen2
 
-cd C-F_Payloadgen
+cd C-F_Payloadgen2
 
 chmod +x C-F_Payloadgen.sh
 
