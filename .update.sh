@@ -3,7 +3,6 @@ figlet  "Update"
 if [ -d "$HOME/C-F_Payloadgen2" ];
 then
 cd $HOME
-rm -rf C-F_Payloadgen2
 elif [ -d "$HOME/C-F_Payloadgen2" ]
 then
 cd $HOME
