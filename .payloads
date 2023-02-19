@@ -41,7 +41,7 @@ echo GET http://$host/ HTTP/1.1[crlf]Host: $host[crlf]X-Online-Host: $host[crlf]
 echo ""
 echo CONNECT $host@[host_port] [protocol][crlf][delay_split]HEAD http://$host/ HTTP/1.1[crlf]Host: $host[crlf]X-Online-Host: $host[crlf]X-Forward-Host: $host[crlf]X-Forwarded-For: $host[crlf]Connection: Keep-Alive[crlf][crlf]
 echo ""
-echo "GET http://free.facebook.com;$host;internet.org;c.whatsapp.net/ HTTP/1.1[crlf]Host: free.facebook.com;$host;internet.org;c.whatsapp.net[crlf]X-Online-Host: free.facebook.com;$host;internet.org;c.whatsapp.net[crlf]X-Forward-Host: free.facebook.com;$host;internet.org;c.whatsapp.net[crlf]X-Forwarded-For: free.facebook.com;$host;internet.org;c.whatsapp.net[crlf]Connection: Keep-Alive[crlf][crlf"
+echo "GET http://free.facebook.com;$host;internet.org;c.whatsapp.net/ HTTP/1.1[crlf]Host: free.facebook.com;$host;internet.org;c.whatsapp.net[crlf]X-Online-Host: free.facebook.com;$host;internet.org;c.whatsapp.net[crlf]X-Forward-Host: free.facebook.com;$host;internet.org;c.whatsapp.net[crlf]X-Forwarded-For: free.facebook.com;$host;internet.org;c.whatsapp.net[crlf]Connection: Keep-Alive[crlf][crlf]"
 echo ""
 echo CONNECT [host_port]@$host [protocol][crlf][delay_split]GET http://$host/ HTTP/1.1[crlf]Host: $host[crlf]X-Online-Host: $host[crlf]X-Forward-Host: $host[crlf]X-Forwarded-For: $host[crlf]Connection: Keep-Alive[crlf][crlf]
 echo ""
@@ -94,7 +94,16 @@ echo "CONNECT [host_port][protocol][crlf][delay_split]GET http://$host/ HTTP/1.1
 echo ""
 echo "CONNECT [host_port]@$host [protocol][crlf]Host: $host[crlf]X-Online-Host: $host[crlf]X-Forward-Host: $host[crlf]X-Forwarded-For: $host[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]CONNECT [host_port] [protocol][crlf][crlf]"
 echo""
-echo "GET / HTTP/1.1[crlf]Host: $host[crlf]Upgrade: websocket[crlf][crlf]
-
-
+echo "GET / HTTP/1.1[crlf]Host: $host[crlf]Upgrade: websocket[crlf][crlf]"
+echo "WEBSOCKET HTTP WITH PROXY PAYLOAD"
+echo "GET wss://[host]// HTTP/1.1[crlf]Host: [host][crlf]X-Forward-For: $host[crlf]Upgrade: websocket[crlf][crlf]
+proxy:$host:80"
+echo "WEBSOCKET PROXY AND SSL PAYLOAD"
+echo "GET wss://[host]// HTTP/1.1[crlf]Host: [host][crlf]X-Forward-For: $host[crlf]Upgrade: websocket[crlf][crlf]
+proxy: $host :443"
+echo "CLOUDFRONT"
+echo "GET / HTTP/1.1[crlf]Host: d1kk0omtu67g9c.cloudfront.net[crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]
+Remote proxy:d1kk0omtu67g9c.cloudfront.net:443
+Sni: $host "
+echo""
 
