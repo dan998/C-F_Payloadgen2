@@ -21,9 +21,14 @@ echo -e "\e[1;31m[3]\e[1;32m SAVE HOSTS EXTRACTED"
 echo -e "\e[1;31m[4]\e[1;32m GENERATE PAYLOADS"
 echo -e "\e[1;31m[5]\e[1;32m SEE OPEN PORTS FOR WEB AND HOST"
 echo -e "\e[1;31m[6]\e[1;32m SEE PROXY OF HOST & WEB"
-echo -e "\e[1;31m[7]\e[1;32m USER MANUAL HOST E."
-echo -e "\e[1;31m[8]\e[1;32m MESSAGE FROM THE CREATOR"
+echo -e "\e[1;31m[7]\e[1;32m SUDOMAIN FINDER"
+echo -e "\e[1;31m[8]\e[1;32m USER MANUAL HOST E."
+echo -e "\e[1;31m[9]\e[1;32m MESSAGE FROM THE CREATOR"
 echo -e "\e[1;31m[0]\e[1;32m EXIT C-F_Payloadgen"
+echo ""
+echo -e "\e[1;36m"
+echo " "
+
 echo ""
 echo -e "\e[1;36m"
 echo " "
@@ -55,9 +60,10 @@ echo -e "\e[1;33mPaste the host to show the status\e[0m";
 echo -e "\e[1;31mRemember CTRL + C to go out\e[0m";
 echo -e "\e[1;36mHOST: \e[0m";
 cat>lista-host.txt
+menu
 ;;
 4)clear
-bash .payloads.ingles
+bash .payloads
 read foo;
 ;;
 5)echo ""
@@ -78,7 +84,15 @@ curl https://api.hackertarget.com/geoip/?q=$WEB
 read foo
 ;;
 
-7)echo -e "\e[1;32mFollow all instructions for the proper use of the tool...";
+7)echo "PRESS ENTER TO EXIT"
+echo -n "HOST: ";
+read HOST;
+python subzero.py $HOST
+echo ""
+read foo
+;;
+
+8)echo -e "\e[1;32mFollow all instructions for the proper use of the tool...";
 sleep 2.5
 cat Guide.txt
 read foo
@@ -89,7 +103,7 @@ sleep 2
 bash ._
 read foo
 ;;
-8)echo ""
+9)echo " "
 echo -e "\e[1;33mCREDITS TO THE DEVELOPER\e[0m"
 echo ""
 echo -e "\e[1;31mCoding family: The place where coders are born"
@@ -97,9 +111,8 @@ echo -e "\e[1;32m"
 echo "YOUTUBE : https://youtube.com/channel/UC2Z80aQa0qmskU_-vIM70pA "
 echo "TELEGRAM: https://t.me/ "
 echo "TELEGRAM: https://t.me/ "
-echo "FACEBOOK: https://m.facebook.com/groups/ "
+echo "Github: https://github.com/dan998/ "
 echo "FACEBOOK: https://m.facebook.com/ "
-echo ""
 echo -e "\e[1;31mCOMPLEMENTS OF THE CODING FAMILY\e[0m"
 echo ""
 echo -e "\e[1;36mNever stop learning, coding is is fun 😊... :)\e[0m"
