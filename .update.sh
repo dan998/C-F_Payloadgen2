@@ -1,8 +1,9 @@
 {
+figlet  "Update"
 if [ -d "$HOME/C-F_Payloadgen2" ];
 then
 cd $HOME
-rm -rf BillCipher 
+rm -rf C-F_Payloadgen2
 elif [ -d "$HOME/C-F_Payloadgen2" ]
 then
 cd $HOME
@@ -28,9 +29,9 @@ while git clone https://github.com/dan998/C-F_Payloadgen2 2> /dev/null; do
     sleep 1
 done
 cd $HOME
-cd C-F_Payloadgen2y
-pip install -r requirements.txt
-pip3 install -r requirements.txt
+cd C-F_Payloadgen2
+chmod +x C-F_Payloadgen.sh
+bash C-F_Payloadgen.sh
 }
 vid(){
 FILE=$HOME/C-F_Payloadgen2

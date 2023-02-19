@@ -22,8 +22,9 @@ echo -e "\e[1;31m[4]\e[1;32m GENERATE PAYLOADS"
 echo -e "\e[1;31m[5]\e[1;32m SEE OPEN PORTS FOR WEB AND HOST"
 echo -e "\e[1;31m[6]\e[1;32m SEE PROXY OF HOST & WEB"
 echo -e "\e[1;31m[7]\e[1;32m SUDOMAIN FINDER"
-echo -e "\e[1;31m[8]\e[1;32m USER MANUAL HOST E."
-echo -e "\e[1;31m[9]\e[1;32m MESSAGE FROM THE CREATOR"
+echo -e "\e[1;31m[8]\e[1;32m UPDATE SCRIPT"
+echo -e "\e[1;31m[9]\e[1;32m USER MANUAL HOST E."
+echo -e "\e[1;31m[10]\e[1;32m MESSAGE FROM THE CREATOR"
 echo -e "\e[1;31m[0]\e[1;32m EXIT C-F_Payloadgen"
 echo ""
 echo -e "\e[1;36m"
@@ -92,7 +93,12 @@ echo ""
 read foo
 ;;
 
-8)echo -e "\e[1;32mFollow all instructions for the proper use of the tool...";
+8)echo "Update"
+bash update
+echo ""
+;;
+
+9)echo -e "\e[1;32mFollow all instructions for the proper use of the tool...";
 sleep 2.5
 cat Guide.txt
 read foo
@@ -103,7 +109,7 @@ sleep 2
 bash ._
 read foo
 ;;
-9)echo " "
+10)echo " "
 echo -e "\e[1;33mCREDITS TO THE DEVELOPER\e[0m"
 echo ""
 echo -e "\e[1;31mCoding family: The place where coders are born"
