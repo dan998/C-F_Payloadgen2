@@ -61,6 +61,7 @@ echo -e "\e[1;33mPaste the host to show the status\e[0m";
 echo -e "\e[1;31mRemember CTRL + C to go out\e[0m";
 echo -e "\e[1;36mHOST: \e[0m";
 cat>lista-host.txt
+echo ""
 menu
 ;;
 4)clear
@@ -88,7 +89,9 @@ read foo
 7)echo "PRESS ENTER TO EXIT"
 echo -n "HOST: ";
 read HOST;
-python subzero.py $HOST
+bash sitestatus.sh $HOST
+sleep 2
+cat $Host
 echo ""
 read foo
 ;;
