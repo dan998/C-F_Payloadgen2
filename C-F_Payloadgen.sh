@@ -94,7 +94,7 @@ read foo
 ;;
 
 8)echo "Update"
-bash update
+bash .update.sh
 echo ""
 ;;
 
